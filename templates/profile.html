@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block head_title %}
+Profile page
+{% endblock %}
+
+{% block extra_head %}
+
+{% endblock %}
+
+
+{% block body %}
+.<main>
+    <div class="container">
+      <section class="mb-4">
+        <div class="row wow fadeIn">
+          <div class="col-6 offset-3">
+            <form>
+                {% csrf_token %}
+                {{ form|crispy }}
+                <input type="submit" class="btn btn-info" value="Submit">
+            </form>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main> 
+  
+{% endblock %}
