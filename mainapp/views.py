@@ -49,7 +49,7 @@ def home(request):
     get_tag = get_tags()
 
     page = request.GET.get('page')
-    paginator = Paginator(posts,6)
+    paginator = Paginator(posts,4)
 
     try:
         posts = paginator.page(page)
